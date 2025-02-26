@@ -15,10 +15,7 @@ const AppContextProvider = (props) => {
 
     const [doctors, setDoctors] = useState([])
 
-    const value = {
-        doctors,
-        currencySymbol
-    }
+    const [token,setToken] = useState('')
 
     const getDoctorsData = async () => {
         try {
@@ -34,6 +31,13 @@ const AppContextProvider = (props) => {
             console.log("API Call Error:", error)
             toast.error(error.message)
         }
+    }
+
+    const value = {
+        doctors,
+        currencySymbol,
+        token,setToken,
+        backendUrl
     }
 
     useEffect(() => {
