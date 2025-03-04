@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 
 const doctorSchema = new mongoose.Schema({
+    
     name: {type:String, required:true},
     email: {type:String, required:true , unique:true},
     password: {type:String, required:true},
@@ -15,6 +16,7 @@ const doctorSchema = new mongoose.Schema({
     address: {type:Object, required:true},
     date: {type:Number, required:true},
     slots_booked: {type:Object, defauly:{}},
+
 },{minimize:false})
 
 const doctorModel = mongoose.models.doctor || mongoose.model('doctor' , doctorSchema)
