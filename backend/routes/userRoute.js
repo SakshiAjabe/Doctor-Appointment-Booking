@@ -10,7 +10,7 @@ userRouter.post('/login' , loginUser)
 
 
 userRouter.get('/get-profile',authUser,getProfile)
-userRouter.post('/update-profile', authUser, upload.single('image'), updateProfile);
+userRouter.post('/update-profile', upload.single('image'),authUser, updateProfile);
 
 
 
