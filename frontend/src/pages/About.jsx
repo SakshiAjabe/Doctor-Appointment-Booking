@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 
 const About = () => {
   return (
+    
     <div>
       <div className='pt-10 text-2xl text-center text-gray-500 '>
         <p>ABOUT <span className='font-medium text-gray-700'>US</span></p>
