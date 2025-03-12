@@ -6,6 +6,7 @@ const MyProfile = () => {
   const {userData , setUserData} = useContext(AppContext)
 
   const [isEdit , setIsEdit] = useState(true)
+  
 
   return (
     <div className='flex flex-col max-w-lg gap-2 text-sm'>
