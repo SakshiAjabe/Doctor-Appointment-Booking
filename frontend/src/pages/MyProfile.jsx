@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { assets } from "../assets/assets";
 import axios from "axios";
+import {toast} from "react-toastify"
 
 const MyProfile = () => {
   const { userData, setUserData, token, backendUrl, loadUserProfileData } =
     useContext(AppContext);
 
-  const [isEdit, setIsEdit] = useState(true);
+  const [isEdit, setIsEdit] = useState(false);
   const [image, setImage] = useState(false);
 
   const updateUserProfileData = async () => {
@@ -20,10 +21,10 @@ const MyProfile = () => {
       formData.append("gender", userData.gender);
       formData.append("dob", userData.dob);
 
-      image && formData.append("image", image);
+      image && formData.append('image', image);
 
       const { data } = await axios.post(
-        backendUrl + "/api/user/update-profile",
+        backendUrl + '/api/user/update-profile',
         formData,
         { headers: { token } }
       );
@@ -180,7 +181,7 @@ const MyProfile = () => {
           {isEdit ? (
             <button
               className="px-8 py-2 transition-all border rounded-full border-primary hover:bg-primary hover:text-white"
-              onClick={() => updateUserProfileData}
+              onClick={updateUserProfileData}
             >
               Save information
             </button>
