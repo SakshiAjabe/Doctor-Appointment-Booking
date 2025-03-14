@@ -22,7 +22,7 @@ const Navbar = () => {
       <img onClick={()=>navigate('/')} className='cursor-pointer w-44' src={assets.logo} alt="" />
       <ul className='items-start hidden gap-5 font-medium md:flex'>
         <NavLink to='/'>
-            <li className='py-1'>Home</li>
+            <li className='py-1'>HOME</li>
             <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'/>
         </NavLink>
         <NavLink to='/doctors'>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden'  />
         </NavLink>
         <NavLink to='/contact'>
-            <li className='py-1'>Contact</li>
+            <li className='py-1'>CONTACT</li>
             <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
       </ul>
