@@ -194,7 +194,8 @@ const MyAppointments = () => {
             </div>
 
             <div className="flex flex-col justify-end gap-2">
-              {!item.cancelled && (
+              {!item.cancelled && item.payment && <button className="py-2 border rounded sm:min-w-48 text-stone-500 bg-indigo-50">Paid</button>  }
+              {!item.cancelled && !item.payment &&  (
                 <button
                   onClick={() => appointmentRazorpay(item._id)}
                   className="py-2 text-sm text-center transition-all duration-300 border rounded text-stone-500 sm:min-w-48 hover:bg-primary hover:text-white"
