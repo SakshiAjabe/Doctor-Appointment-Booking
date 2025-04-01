@@ -54,6 +54,7 @@ const DoctorAppointments = () => {
             </div>
         </div>
     )
+    
 }
 
 export default DoctorAppointments
